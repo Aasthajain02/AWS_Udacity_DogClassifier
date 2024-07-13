@@ -1,0 +1,84 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                beartoy_001.png  label:                    beartoy
+ 2 key:                    cat_002.jpg  label:                        cat
+ 3 key:       Golden_retriever_003.png  label:           golden retriever
+ 4 key:             great_pyrenees.jpg  label:                      great
+ 5 key:                  human_005.jpg  label:                      human
+
+     MATCH:
+
+                   cat_002.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat
+
+      Golden_retriever_003.png: 
+Real:           golden retriever   Classifier:               golden retriever
+
+ NOT A MATCH:
+
+               beartoy_001.png: 
+Real:                    beartoy   Classifier:              teddy, teddy bear
+
+            great_pyrenees.jpg: 
+Real:                      great   Classifier:             labrador retriever
+
+                 human_005.jpg: 
+Real:                      human   Classifier:                    windsor tie
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+
+     MATCH:
+
+                   cat_002.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+      Golden_retriever_003.png: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+               beartoy_001.png: 
+Real:                    beartoy   Classifier:              teddy, teddy bear  
+PetLabelDog: 0  ClassLabelDog: 0
+
+            great_pyrenees.jpg: 
+Real:                      great   Classifier:             labrador retriever  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                 human_005.jpg: 
+Real:                      human   Classifier:                    windsor tie  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  1  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  75.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  1  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  75.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   5
+N Dog Images        :   1
+N Not-Dog Images    :   4
+pct_match : 40.0 %
+pct_correct_dogs : 100.0 %
+pct_correct_breed : 50.0 %
+pct_correct_notdogs : 75.0 %
+
+INCORRECT Dog/NOT Dog Assignments:
+The pet label : great  The classifier label : labrador retriever
+
+**   Accuracy of the model is 80.00%
+
+** Total Elapsed Runtime: 0:0:0

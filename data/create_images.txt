@@ -1,0 +1,41 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in gecko_02.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer:  gecko_02.jpg:
+Real:gecko   
+VGG_Classifier: banded gecko, gecko
+ResNet_Classifier: african chameleon, chamaeleo chamaeleon
+AlexNet Classifier: alligator lizard
+ 
+ NO ,three models doesn't predicts the same breed althrough VGG classifier is near about the actual label but not the 100% correct
+
+
+
+2. Did each of the three model architectures classify the breed of dog in gecko_02.jpg to be the same breed of dog as that model architecture classified gecko_80.jpg? If not, report the differences in the classifications.
+
+Answer: Both the images actually of same breed is not predicted or classified of same breed here are the differences below.
+
+gecko_02.jpg:
+Real:gecko  
+VGG_Classifier: banded gecko, gecko
+ResNet_Classifier: african chameleon, chamaeleo chamaeleon
+AlexNet_Classifier: alligator lizard
+
+gecko_80.jpg:
+Real:gecko   
+VGG_Classifier: tailed frog, bell toad, ribbed toad, tailed toad, ascaphus trui
+ResNet_Classifier: tailed frog, bell toad, ribbed toad, tailed toad, ascaphus trui
+Alex_Net_Classifier: tailed frog, bell toad, ribbed toad, tailed toad, ascaphus trui
+
+
+3. Did the three model architectures correctly classify Rabbit_002.jpg: and skunk_029.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: Yes all the three models accurately predict non dog images to not be a dogs and 75% accuracy of not-dog classification.
+rabbit   Classifier: wood rabbit, cottontail, cottontail rabbit, rabbit
+skunk   Classifier:     skunk, polecat, wood pussy
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer: VGG have best and most closest predicted label to the actual label so that's why performance metrics for the uploaded images, with a 40.0% overall match accuracy.
+and also correctly identified not-dog images with 75.0% accuracy. So it might be choosen to predict for unseen images.
